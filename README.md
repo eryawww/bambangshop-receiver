@@ -98,3 +98,15 @@ Pada kasus ini RwLock lebih cocok dikarenakan operasi yang kita jalankan kebanya
 Fitur lazy_static memungkinkan pembuatan variabel yang berperan sebagai singleton (hanya ada satu instance dari kelas/struct tersebut dalam program). Ini berbeda dengan Java, di mana variabel static dapat diubah nilainya. Dengan menggunakan lazy_static, variabel tersebut diinisialisasi sekali dan tetap immutable sepanjang program berjalan mengamankan thread saat melakukan konkurensi.
 
 #### Reflection Subscriber-2
+
+1. Have you explored things outside of the steps in the tutorial, for example: src/lib.rs? If not, explain why you did not do so. If yes, explain things that you have learned from those other parts of code.
+
+Saya eksplore hal lain seperti src/lib.rs yang merupakan file bawaan proyek Rust yang digunakan untuk mendefinisikan modul dan settingannya. Ini adalah titik awal eksekusi (mirip main di java).
+
+2. Since you have completed the tutorial by now and have tried to test your notification system by spawning multiple instances of Receiver, explain how Observer pattern eases you to plug in more subscribers. How about spawning more than one instance of Main app, will it still be easy enough to add to the system?
+
+Penggunaan sistem desain Observer mempermudah penambahan fitur (seperti subscription). Setiap pelanggan dapat mendaftar secara independen untuk menerima pemberitahuan. Sistem desain membantu kita memikirkan desain dan pemodelan dan mempercepat proses development. Sistem desain juga menyatukan pemikiran dan intuisi para developer terkait arsitektur penulisan kode.
+
+3. Have you tried to make your own Tests, or enhance documentation on your Postman collection? If you have tried those features, tell us whether it is useful for your work (it can be your tutorial work or your Group Project).
+
+Fitur-fitur dalam postman sangat bermanfaat terutama dalam konteks kolaborasi dengan fitur import dan export. Fasilitas GUI memudahkan kita untuk mengontrol request, output, dan validasinya. Kita dapat melakukan sharing testing kepada programmer lain dengan cepat. 
